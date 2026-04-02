@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/customize_cv.php" value="04bb628c-9ac5-4454-9aa2-861fd00ea457" />
+    <file url="file://$PROJECT_DIR$/index.php" value="04bb628c-9ac5-4454-9aa2-861fd00ea457" />
+    <file url="file://$PROJECT_DIR$/login.php" value="04bb628c-9ac5-4454-9aa2-861fd00ea457" />
+    <file url="file://$PROJECT_DIR$/profile.php" value="04bb628c-9ac5-4454-9aa2-861fd00ea457" />
+    <file url="file://$PROJECT_DIR$/schema.sql" value="04bb628c-9ac5-4454-9aa2-861fd00ea457" />
+    <file url="file://$PROJECT_DIR$/signup.php" value="04bb628c-9ac5-4454-9aa2-861fd00ea457" />
+    <file url="file://$PROJECT_DIR$/view_profile.php" value="04bb628c-9ac5-4454-9aa2-861fd00ea457" />
+  </component>
+</project>

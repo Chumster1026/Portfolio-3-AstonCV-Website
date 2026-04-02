@@ -1,0 +1,166 @@
+
+/*page*/
+
+/*
+Using aptos
+gradients wanted
+just going to port over most of the stuff from portfolio 1 and repurpose it since this is worth only 5 marks
+
+*/
+
+
+body {
+    margin: 0;
+    background-image: url("css_images/wp11018821-space-2560x1440-wallpapers.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #0a1228;
+    color: white;
+    font-family: Aptos, Helvetica, sans-serif;
+}
+
+
+/* Header and navi stuff*/
+
+
+#main-header {
+    text-align: center;
+    background: radial-gradient(circle, #020024 0%, #090979 35%, #00d4ff 100%);
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+
+#Navi {
+    margin: 0;
+    padding: 15px 0;
+    font-family: "Aptos", Courier, monospace;
+    font-size: 42px;
+}
+
+.navigation_links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* make the hyperlinks stand out a bit more*/
+.navigation_links a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navigation_links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* main headings and paragraphs*/
+
+
+main {
+    width: 85%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: rgba(10, 18, 40, 0.85);
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+h2, h3 {
+    font-family: "Aptos", Courier, monospace;
+    color: #eaf6ff;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+a {
+    color: #8fe9ff;
+}
+
+a:hover {
+    color: #c8f5ff;
+}
+
+
+/* boxes */
+
+.intro-box {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-left: 5px solid #00d4ff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+/*
+p
+*/
+hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+}
+
+
+/* login and signup form*/
+
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #00d4ff, #0066ff);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
