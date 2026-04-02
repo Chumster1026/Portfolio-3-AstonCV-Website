@@ -22,10 +22,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 /*!40101 SET DEFAULT_STORAGE_ENGINE = InnoDB */;
 --
--- Database: `astoncv`
+-- Database: `dg250486090_db`
 --
-CREATE DATABASE IF NOT EXISTS `astoncv` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `astoncv`;
+-- CREATE DATABASE IF NOT EXISTS `astoncv` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `dg250486090_db`;
 
 -- --------------------------------------------------------
 
@@ -77,6 +77,7 @@ CREATE TABLE IF NOT EXISTS cv_socials (
     cv_id bigint(20) UNSIGNED NOT NULL,
     url VARCHAR(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     social_name VARCHAR(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+    CONSTRAINT uq_social UNIQUE (cv_id, social_name),
     CONSTRAINT fk_cv_id FOREIGN KEY (cv_id) REFERENCES cvs(id)
                                       ON DELETE CASCADE
 
