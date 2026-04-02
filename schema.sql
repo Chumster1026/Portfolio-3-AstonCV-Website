@@ -70,15 +70,17 @@ CREATE TABLE IF NOT EXISTS cvs (
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
 
 -- cv_socials does not need a FK relationship to users, it will have a fk to cvs to enforce a many relation
--- need to cascade in case users delete their current cv and make a new one, same thing fro profiles
+-- need to cascade in case users delete their current cv and make a new one, same thing for profiles
 
 CREATE TABLE IF NOT EXISTS cv_socials (
     id bigint(20) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     cv_id bigint(20) UNSIGNED NOT NULL,
     url VARCHAR(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    CONSTRAINT unique_cv_url UNIQUE (cv_id, url),
+    social_name VARCHAR(30) COLLATE utf8mb4_unicode_ci NOT NULL,
     CONSTRAINT fk_cv_id FOREIGN KEY (cv_id) REFERENCES cvs(id)
                                       ON DELETE CASCADE
+
+
 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
 
@@ -88,6 +90,43 @@ CREATE TABLE IF NOT EXISTS cv_socials (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 # INSERT INTO users (name, email, password, phone) VALUES ('Hoffman', 'Hoffman123@gmail.com', 'password123', '07889231223');
+
+# --------------------------------------------------------------------------------------------------------------------------------------------
+# Sample examiner account
+# Plain password for login: Password123!
+# Sample information includes some stuff used in other test accounts
+
+INSERT INTO users (id, name, email, password, phone)
+VALUES (
+           1,
+           'Test Account',
+           'TestAcc@aston.ac.uk',
+           '$2y$10$OPJR3I4q0AhMgGmSnIIhl.oErp0RM7/JM.0ejHcy47bQwp.UoxSyS',
+           '07889231223'
+       );
+
+INSERT INTO profiles (id, user_id, profile_text)
+VALUES (
+           1,
+           1,
+           'Cybersecurity student with an interest in software development, web systems, and secure design.'
+       );
+
+INSERT INTO cvs (id, user_id, education_summary, personal_statement, skills, key_programming_language)
+VALUES (
+           1,
+           1,
+           'Studying Cybersecurity at Aston University. Did Computer Science as an A Level in King Edwards VI College along with A Level Maths',
+           'Motivated student interested in embedded systems, cyber security, software development and Unmanned Aerial Vehicles. ',
+           'PHP, SQL, HTML, CSS, JavaScript, Python, C++',
+           'Python'
+       );
+
+INSERT INTO cv_socials (id, cv_id, url, social_name)
+VALUES
+    (1, 1, NULL, 'github'),
+    (2, 1, NULL, 'linkedin'),
+    (3, 1, NULL, 'website');
 
 
 COMMIT;
